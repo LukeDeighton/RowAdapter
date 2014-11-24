@@ -7,7 +7,7 @@ RowAdapter...
 * aims to provide more flexibility than other adapter libraries
 * handles ViewType information, simplifying your code and making it reusable
 * supports RecyclerView and is also compatible with existing ListView implementations
-* can be used as a `RecyclerView.Aadapter`, `SpinnerAdapter`, `CursorAdapter`, `ExpandableListAdapter`, `ListAdapter`
+* can be used as a `RecyclerView.Adapter`, `SpinnerAdapter`, `CursorAdapter`, `ExpandableListAdapter`, `ListAdapter`
 
 Basic Usage
 -----------
