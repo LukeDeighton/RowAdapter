@@ -4,14 +4,13 @@ RowAdapter
 Yet another adapter library?
 ----------------------------
 RowAdapter...
+* can be used as a replacement to `RecyclerView.Adapter`, `SpinnerAdapter`, `CursorAdapter`, `ExpandableListAdapter`, `ListAdapter` under a common interface.
 * aims to provide more flexibility than other adapter libraries
 * handles ViewType information, simplifying your code and making it reusable
-* supports RecyclerView and is also compatible with existing ListView implementations
-* can be used as a `RecyclerView.Adapter`, `SpinnerAdapter`, `CursorAdapter`, `ExpandableListAdapter`, `ListAdapter`
 
 Basic Usage
 -----------
-1) Declare a Row Class extending a Row Subtype or implementing `ViewHolderRowType` or `RowType` 
+1) Create a Row Class which represents an Adapter View and handles binding of your model to the view. You have a choice of sub classes to extend from that remove boiler plate code, such as inflating from a layout resource.
 ```java
 public class SampleRecyclerRow extends ViewHolderRow<String, SampleRecyclerRow.ViewHolder> {
     public SampleRecyclerRow(String item) {
@@ -38,7 +37,7 @@ public class SampleRecyclerRow extends ViewHolderRow<String, SampleRecyclerRow.V
     }
 }
 ```
-2) Instantiate a list of Rows:
+2) Instantiate a list of Rows of any type (View Type information is handled by RowAdapter):
 ```java
 List<SampleRecyclerRow> rows = new ArrayList<SampleRecyclerRow>();
 for (int i = 0; i < 17; i++) {
@@ -46,7 +45,7 @@ for (int i = 0; i < 17; i++) {
     rows.add(new SampleRecyclerRow(text));
 }
 ```
-3) Instantiate an Adapter and supply it to either a `ListView` `RecyclerView` or `ExpandableListView`
+3) Instantiate an Adapter and provide it to either a `ListView` `RecyclerView` or `ExpandableListView`
 ```java
 mRecyclerView.setAdapter(new RecyclerRowAdapter(this, rows));
 ```
@@ -65,3 +64,4 @@ RowClickHandler clickHandler = new RowClickHandler()
 Further Usage
 -------------
 Please refer to this blog post or the sample module for a complete set of usages.
+
