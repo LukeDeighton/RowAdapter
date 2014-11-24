@@ -48,7 +48,7 @@ for (int i = 0; i < 17; i++) {
 ```
 3) Instantiate an Adapter and supply it to either a `ListView` `RecyclerView` or `ExpandableListView`
 ```java
-    mRecyclerView.setAdapter(new RecyclerRowAdapter(this, rows));
+mRecyclerView.setAdapter(new RecyclerRowAdapter(this, rows));
 ```
 4) Handle click events with
 ```java
