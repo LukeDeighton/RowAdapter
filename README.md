@@ -5,9 +5,9 @@ Yet another adapter library?
 ----------------------------
 RowAdapter...
 * aims to provide more flexibility than other adapter libraries
-* encapsulates ViewType information so that code can be reused
-* removes boilerplate code and aids productivity
+* handles ViewType information, simplifying your code and making it reusable
 * supports RecyclerView and is also compatible with existing ListView implementations
+* can be used as a `RecyclerView.Aadapter`, `SpinnerAdapter`, `CursorAdapter`, `ExpandableListAdapter`, `ListAdapter`
 
 Basic Usage
 -----------
@@ -46,7 +46,7 @@ for (int i = 0; i < 17; i++) {
     rows.add(new SampleRecyclerRow(text));
 }
 ```
-3) Instantiate an Adapter and supply it to either `ListView` `RecyclerView` or `ExpandableListView`
+3) Instantiate an Adapter and supply it to either a `ListView` `RecyclerView` or `ExpandableListView`
 ```java
     mRecyclerView.setAdapter(new RecyclerRowAdapter(this, rows));
 ```
