@@ -50,7 +50,7 @@ for (int i = 0; i < 17; i++) {
 ```java
 mRecyclerView.setAdapter(new RecyclerRowAdapter(this, rows));
 ```
-4) Handle click events with
+4) Handle click events with a `RowClickHandler` to support multiple RowType click events or using `OnRowClickListener` for single click events.
 ```java
 RowClickHandler clickHandler = new RowClickHandler()
 .put(SampleRecyclerRow.class, new OnRowClickListener<SampleRecyclerRow>() {
