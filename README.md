@@ -63,5 +63,5 @@ RowClickHandler clickHandler = new RowClickHandler()
 ```
 Further Usage
 -------------
-Please refer to this blog post or the sample module for a complete set of usages.
+Please refer to [this](http://createdineden.com/blog/2014/november/25/rowadapter-android-adapters-made-simple/) blog post or the sample module for a complete set of usages.
 
